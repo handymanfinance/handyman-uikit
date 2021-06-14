@@ -14,7 +14,7 @@ const StyledAudit = styled.div`
   text-align: center;
 
   svg {
-    width: calc(100% - 30px);
+    width: 100%;
   }
 `;
 

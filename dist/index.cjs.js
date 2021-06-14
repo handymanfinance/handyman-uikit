@@ -2113,7 +2113,7 @@ var RugDocAudit = function (_a) {
         React__default['default'].createElement("image", { width: "384", height: "164", href: isDark ? '/images/egg/RugDocAuditDark.png' : '/images/egg/RugDocAuditWhite.png' })));
 };
 
-var StyledAudit = styled__default['default'].div(templateObject_1$z || (templateObject_1$z = __makeTemplateObject(["\n  margin-bottom: 5px;\n  text-align: center;\n\n  svg {\n    width: calc(100% - 30px);\n  }\n"], ["\n  margin-bottom: 5px;\n  text-align: center;\n\n  svg {\n    width: calc(100% - 30px);\n  }\n"])));
+var StyledAudit = styled__default['default'].div(templateObject_1$z || (templateObject_1$z = __makeTemplateObject(["\n  margin-bottom: 5px;\n  text-align: center;\n\n  svg {\n    width: 100%;\n  }\n"], ["\n  margin-bottom: 5px;\n  text-align: center;\n\n  svg {\n    width: 100%;\n  }\n"])));
 var AuditButton = function (_a) {
     var auditLink = _a.auditLink, isDark = _a.isDark;
     return (React__default['default'].createElement(StyledAudit, null,
