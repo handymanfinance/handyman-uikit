@@ -9,8 +9,8 @@ interface TechRateAuditProps extends SvgProps {
 const RugDocAudit: React.FC<TechRateAuditProps> = ({ isDark, ...props }) => {
   const textColor = isDark ? "#FFFFFF" : "#000000";
   return (
-    <Svg viewBox="0 0 369 120" {...props}>
-      <image width="369" height="120" href={isDark ? '/images/egg/RugDocAuditDark.png' : '/images/egg/RugDocAuditWhite.png'}/>
+    <Svg viewBox="0 0 384 164" {...props}>
+      <image width="384" height="164" href={isDark ? '/images/egg/RugDocAuditDark.png' : '/images/egg/RugDocAuditWhite.png'}/>
     </Svg>
   )
 };
