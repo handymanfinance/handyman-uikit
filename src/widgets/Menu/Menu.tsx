@@ -115,6 +115,7 @@ const Menu: React.FC<NavProps> = ({
   // Find the home link if provided
   const homeLink = links.find((link) => link.label === "Home");
   const auditLink = links.find((link) => link.label === "Audit");
+  const filteredLinks = links.filter((link) => link.label !== "Audit");
 
   return (
     <Wrapper>
@@ -143,7 +144,7 @@ const Menu: React.FC<NavProps> = ({
           currentLang={currentLang}
           cakePriceUsd={cakePriceUsd}
           pushNav={setIsPushed}
-          links={links}
+          links={filteredLinks}
           priceLink={priceLink}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>

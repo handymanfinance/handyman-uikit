@@ -2708,6 +2708,7 @@ var Menu = function (_a) {
     // Find the home link if provided
     var homeLink = links.find(function (link) { return link.label === "Home"; });
     var auditLink = links.find(function (link) { return link.label === "Audit"; });
+    var filteredLinks = links.filter(function (link) { return link.label !== "Audit"; });
     return (React.createElement(Wrapper$1, null,
         React.createElement(StyledNav, { showMenu: showMenu },
             React.createElement(Logo$1, { isPushed: isPushed, togglePush: function () { return setIsPushed(function (prevState) { return !prevState; }); }, isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
@@ -2715,7 +2716,7 @@ var Menu = function (_a) {
                 React.createElement(UserBlock, { account: account, login: login, logout: logout }),
                 profile && React.createElement(Avatar, { profile: profile }))),
         React.createElement(BodyWrapper, null,
-            React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, auditLink: auditLink === null || auditLink === void 0 ? void 0 : auditLink.href, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: links, priceLink: priceLink }),
+            React.createElement(Panel, { isPushed: isPushed, isMobile: isMobile, showMenu: showMenu, isDark: isDark, auditLink: auditLink === null || auditLink === void 0 ? void 0 : auditLink.href, toggleTheme: toggleTheme, langs: langs, setLang: setLang, currentLang: currentLang, cakePriceUsd: cakePriceUsd, pushNav: setIsPushed, links: filteredLinks, priceLink: priceLink }),
             React.createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React.createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
