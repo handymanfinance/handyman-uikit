@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon, CogIcon, SvgProps } from "../../components/Svg";
+import { CashRoundIcon, PancakeRoundIcon, CogIcon, SvgProps } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import Flex from "../../components/Flex/Flex";
 import Dropdown from "../../components/Dropdown/Dropdown";
@@ -60,10 +60,12 @@ const PanelFooter: React.FC<Props> = ({
   toggleTheme,
   isDark,
   cakePriceUsd,
+  cashPriceUsd,
   currentLang,
   langs,
   setLang,
   priceLink,
+  cashPriceLink
 }) => {
   if (!isPushed) {
     return (
@@ -82,6 +84,14 @@ const PanelFooter: React.FC<Props> = ({
           <PriceLink href={priceLink} target="_blank">
             <PancakeRoundIcon width="24px" mr="8px" />
             <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+          </PriceLink>
+        ) : (
+          <Skeleton width={80} height={24} />
+        )}
+        {cashPriceUsd ? (
+          <PriceLink href={cashPriceLink} target="_blank">
+            <CashRoundIcon width="24px" mr="8px" />
+            <Text color="textSubtle" bold>{`$${cashPriceUsd.toFixed(3)}`}</Text>
           </PriceLink>
         ) : (
           <Skeleton width={80} height={24} />
